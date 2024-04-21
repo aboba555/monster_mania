@@ -1,0 +1,3 @@
+/Users/arturkacsur/CLionProjects/monstermania/cmake-build-debug/CMakeFiles/monstermania.dir
+/Users/arturkacsur/CLionProjects/monstermania/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/arturkacsur/CLionProjects/monstermania/cmake-build-debug/CMakeFiles/rebuild_cache.dir
