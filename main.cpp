@@ -1,18 +1,35 @@
 #include <iostream>
 using namespace std;
-class MainHero{
 
+class Monster{
+
+};
+
+class MiniBoss{
+
+};
+
+class MainBoss{
+
+};
+
+class MainHero{
 private:
-    int damage;
-    int health;
     int mana;
+    int health;
+    int basicAttack;
+    int ultimateAttack;
+
+
+
+
 public:
-    int getDamage() const {
-        return damage;
+    int getMana() const {
+        return mana;
     }
 
-    void setDamage(int damage) {
-        MainHero::damage = damage;
+    void setMana(int mana) {
+        MainHero::mana = mana;
     }
 
     int getHealth() const {
@@ -23,58 +40,61 @@ public:
         MainHero::health = health;
     }
 
-    int getMana() const {
-        return mana;
+    int getBasicAttack() const {
+        return basicAttack;
     }
 
-    void setMana(int mana) {
-        MainHero::mana = mana;
+    void setBasicAttack(int basicAttack) {
+        MainHero::basicAttack = basicAttack;
     }
 
-};
-class Monster{
-private:
-    int damage;
-    int health;
-    int money;
+    int getUltimateAttack() const {
+        return ultimateAttack;
+    }
+
+    void setUltimateAttack(int ultimateAttack) {
+        MainHero::ultimateAttack = ultimateAttack;
+    }
 
 public:
-    int getDamage() const {
-        return damage;
+    void chooseClass(string classHero){
+        if (classHero == "Wizard"){
+            setBasicAttack(5);
+            setUltimateAttack(20);
+        }
+        if (classHero == "Sworder"){
+            setBasicAttack(7);
+            setUltimateAttack(18);
+        }
+        if (classHero == "Archer"){
+            setBasicAttack(7);
+            setUltimateAttack(25);
+
+        }
+        if (classHero == "Assasin"){
+            setBasicAttack(8);
+            setUltimateAttack(15);
+        }
     }
-
-    void setDamage(int damage) {
-        Monster::damage = damage;
-    }
-
-    int getHealth() const {
-        return health;
-    }
-
-    void setHealth(int health) {
-        Monster::health = health;
-    }
-
-    int getMoney() const {
-        return money;
-    }
-
-    void setMoney(int money) {
-        Monster::money = money;
-    }
-
-
 };
-class MiniBoss: public Monster{
-
-};
-class MainBoss: public Monster{
-
-};
+MainHero mainHero;
+Monster monster;
+MiniBoss miniBoss;
+MainBoss mainBoss;
 int main() {
-    MainHero mainHero;
-    Monster monster;
-    MiniBoss miniBoss;
-    MainBoss mainBoss;
+    string heroClass;
+    cout << "Welcome to the world of Monster Mania, "
+            "\nwhere adventures await you at every turn! "
+            "\nBefore stepping into battle, you must make an important choice and choose your path. "
+            "\n-------------------------------------------------------------------------"
+            "\n1) Will you be a sharpshooting archer, dealing deadly blows from afar? "
+            "\n2) Or perhaps you prefer close combat as a master swordsman? "
+            "\n3) Maybe you'll choose the path of a wizard, wielding powerful magic? "
+            "\n4) Or perhaps you'll opt for stealthy, lethal attacks as an assassin? "
+            "\n-------------------------------------------------------------------------"
+            "\nThe decision is yours, hero. Onward,"
+    ;
+    cin >> heroClass;
+    mainHero.chooseClass(heroClass);
 
 }
