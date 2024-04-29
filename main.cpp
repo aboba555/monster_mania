@@ -61,19 +61,23 @@ public:
         if (classHero == "Wizard"){
             setBasicAttack(5);
             setUltimateAttack(20);
+            setMana(65);
         }
         if (classHero == "Sworder"){
             setBasicAttack(7);
-            setUltimateAttack(18);
+            setUltimateAttack(26);
+            setMana(40);
         }
         if (classHero == "Archer"){
             setBasicAttack(7);
             setUltimateAttack(25);
+            setMana(55);
 
         }
         if (classHero == "Assasin"){
             setBasicAttack(8);
             setUltimateAttack(15);
+            setMana(60);
         }
     }
 };
