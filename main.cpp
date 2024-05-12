@@ -1,4 +1,5 @@
 #include <iostream>
+#include <unistd.h>
 using namespace std;
 
 class Monster{
@@ -77,26 +78,26 @@ public:
             setHealth(80);
             setBasicAttack(5);
             setUltimateAttack(20);
-            setMana(65);
+            setMana(50);
         }
         if (classHero == "Sworder"){
             setHealth(90);
             setBasicAttack(7);
             setUltimateAttack(26);
-            setMana(40);
+            setMana(50);
         }
         if (classHero == "Archer"){
             setHealth(65);
             setBasicAttack(7);
             setUltimateAttack(25);
-            setMana(55);
+            setMana(50);
 
         }
         if (classHero == "Assasin"){
             setHealth(60);
             setBasicAttack(8);
             setUltimateAttack(15);
-            setMana(60);
+            setMana(50);
         }
     }
 };
@@ -121,24 +122,89 @@ void monologue(){
     cout << "You choose: " << heroClass << endl;
     mainHero.chooseClass(heroClass);
 }
+
+
+    void shopMainMenu(){
+        cout << "Welcome to my tavern, brave warrior. What can I offer you today?" << endl;
+        sleep(3);
+        cout << "1) Browse our selection of fine swords." << endl;
+        sleep(3);
+        cout << "2) Explore our array of exquisite armor." << endl;
+        sleep(3);
+        cout << "3) Replenish your health and mana." << endl;
+        sleep(3);
+        cout << "Choose your option from 1 to 3." << endl;
+    }
+
+
+    void shopChoice(){
+        int option;
+
+        cin >> option;
+
+        if (option == 1){
+
+        }
+        if (option == 2){
+
+        }
+        if (option == 3) {
+            int choice;
+            cout << "Of course, to restore health and mana, you'll need to pay 5 gold coins." << endl;
+            cout << "1) Buy \n"
+                    "2) Back to the shop";
+            cout << "Choose your option from 1 to 2." << endl;
+            cin >> choice;
+            if (choice == 1) {
+                if (mainHero.getBalance() - 5 < 0) {
+                    cout << "You dont have enough gold coins" << endl;
+                    shopMainMenu();
+                } else{
+                    mainHero.setBalance(mainHero.getBalance()-5);
+                    cout << "You have successfully restored 10 health points and fully replenished your mana." << endl;
+                    mainHero.setMana(50);
+                    mainHero.setHealth(mainHero.getHealth()+10);
+                    shopMainMenu();
+                }
+            } else{
+                shopMainMenu();
+            }
+        }
+    }
+
 void firstVillage(){
     int option;
-    cout << "\nMe: Where am I? This... doesn't look like the place I was before.\n"
-            "\n"
-            "Local: Welcome to our village, traveler. You seem lost. How did you get here?\n"
-            "\n"
-            "Me: I... I'm not sure. Everything was so strange. I was just walking through the forest, and suddenly... I ended up here.\n"
-            "\n"
-            "Local: Odd as it may seem, such things happen in our lands. But don't worry, we can help you here. We can offer you equipment and potions to help you survive in this dangerous world.\n"
-            "\n"
-            "Me: I'm grateful for the help. But what do I do next?\n"
-            "\n"
-            "Local: The choice is yours, traveler. If you're ready to continue your journey, you can set off. But be cautious, there are monsters in these lands.\n"
-            "\n"
-            "Local: Now, choose what you'll do next: 1) CONTINUE or 2) BUY EQUIPMENT or 3) BUY POTION."
-            "'\n"
-            "Choose your option from 1 to 3." << endl;
+    cout << endl << "Me: Where am I? This... doesn't look like the place I was before." << endl << endl;
+    sleep(3);
+    cout << "Local: Welcome to our village, traveler. You seem lost. How did you get here?" << endl << endl;
+    sleep(3);
+    cout << "Me: I... I'm not sure. Everything was so strange. I was just walking through the forest, and suddenly... I ended up here."<< endl << endl;
+    sleep(3);
+    cout << "Local: Odd as it may seem, such things happen in our lands. But don't worry, we can help you here. We can offer you equipment and potions to help you survive in this dangerous world."<< endl << endl;
+    sleep(3);
+    cout << "Me: I'm grateful for the help. But what do I do next?" << endl << endl;
+    sleep(3);
+    cout << "Local: The choice is yours, traveler. If you're ready to continue your journey, you can set off. But be cautious, there are monsters in these lands." << endl << endl;
+    sleep(3);
+    cout << "Local: Now, choose what you'll do next: 1) CONTINUE or 2) BUY EQUIPMENT or 3) BUY POTION." << endl << endl;
+    sleep(3);
+    cout << "Your balance is " << mainHero.getBalance() << " coins" <<  endl;
+    sleep(3);
+    cout << "Choose your option from 1 to 3." << endl;
     cin >> option;
+    if (option == 1){
+
+    }
+    if (option == 2){
+        shopMainMenu();
+        shopChoice();
+
+
+    }
+    if (option == 3){
+
+
+    }
 }
 
 int main() {
