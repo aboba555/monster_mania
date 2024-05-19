@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_monstermania: phony || CMakeFiles/monste
 
 build CMakeFiles/monstermania.dir/main.cpp.o: CXX_COMPILER__monstermania_unscanned_Debug /Users/arturkacsur/CLionProjects/monstermania/main.cpp || cmake_object_order_depends_target_monstermania
   DEP_FILE = CMakeFiles/monstermania.dir/main.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.4 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/monstermania.dir
   OBJECT_FILE_DIR = CMakeFiles/monstermania.dir
   TARGET_COMPILE_PDB = CMakeFiles/monstermania.dir/
@@ -66,7 +66,7 @@ build CMakeFiles/monstermania.dir/main.cpp.o: CXX_COMPILER__monstermania_unscann
 # Link the executable monstermania
 
 build monstermania: CXX_EXECUTABLE_LINKER__monstermania_Debug CMakeFiles/monstermania.dir/main.cpp.o
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.4
   OBJECT_DIR = CMakeFiles/monstermania.dir
   POST_BUILD = :
   PRE_LINK = :

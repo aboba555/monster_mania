@@ -146,6 +146,17 @@ void monologue(){
 
         }
         if (option == 2){
+            int choice;
+            cout << "Choose your blade wisely: " << endl;
+            cout << "1) Blade: +5 damage - Cost: 15 gold" << endl;
+            cout << "2) Blade: +10 damage - Cost: 25 gold" << endl;
+            cout << "3) Blade: +15 damage - Cost: 45 gold" << endl;
+            cout << "4) Blade: +20 damage - Cost: 55 gold" << endl;
+            cout << "5) Select your weapon in range 1-4" << endl;
+            cin >> choice;
+            if (choice == 1){
+
+            }
 
         }
         if (option == 3) {
