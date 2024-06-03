@@ -4,8 +4,25 @@ using namespace std;
 
 class Monster{
 private:
-    int health;
-    int basicAttack;
+    int health = 20;
+    int basicAttack = 5;
+
+public:
+    int getHealth() const {
+        return health;
+    }
+
+    void setHealth(int health) {
+        Monster::health = health;
+    }
+
+    int getBasicAttack() const {
+        return basicAttack;
+    }
+
+    void setBasicAttack(int basicAttack) {
+        Monster::basicAttack = basicAttack;
+    }
 };
 
 class MiniBoss{
@@ -106,6 +123,12 @@ Monster monster;
 MiniBoss miniBoss;
 MainBoss mainBoss;
 
+void firstAttack(){
+    cout << "Warrior, we continue on our way, we may meet a monster on the way";
+    // random if
+
+}
+
 void monologue(){
     string heroClass;
     cout << "Welcome to the world of Monster Mania, "
@@ -205,14 +228,15 @@ void firstVillage(){
     cin >> option;
     if (option == 1){
 
+
     }
     if (option == 2){
-        shopMainMenu();
         shopChoice();
-
-
+        shopMainMenu();
     }
     if (option == 3){
+        shopChoice();
+        shopMainMenu();
 
 
     }
