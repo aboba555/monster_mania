@@ -124,8 +124,26 @@ MiniBoss miniBoss;
 MainBoss mainBoss;
 
 void firstAttack(){
-    cout << "Warrior, we continue on our way, we may meet a monster on the way";
-    // random if
+    int userAttack;
+    cout << "Warrior, we continue on our way, we may meet a monster on the way" << endl;
+    sleep(3);
+    cout << "Monster: Aha, I've got you now! You'll have to defeat me if you want to move forward!" << endl;
+    sleep(1);
+    cout << "|| Monster punch you and took away 5 HP. ||" << endl;
+    sleep(1);
+    cout << "Choose your attack: (1 to 2)" << endl;
+    cout << "1) Basic Attack (2 mana) (5 health)" << endl;
+    cout << "2) Ultimate (10 mana) (15 health)" << endl;
+    cin >> userAttack;
+    if (userAttack == 1){
+        if ((userAttack-monster.getHealth()) == 0){
+            cout << "You successfully completed your first battle, congratulations. "
+                    "You earn 15 gold and head to the second village, "
+                    "where you can buy new items and continue your challenging adventure!" << endl;
+        }
+
+    }
+
 
 }
 
@@ -227,6 +245,7 @@ void firstVillage(){
     cout << "Choose your option from 1 to 3." << endl;
     cin >> option;
     if (option == 1){
+        firstAttack();
 
 
     }
